@@ -1,19 +1,9 @@
-const { createServer } = require('@graphql-yoga/node')
-// Provide your schema
-const server = createServer({
-  schema: {
-    typeDefs: `
-      type Query {
-        ping: String
-      }
-    `,
-    resolvers: {
-      Query: {
-        ping: () => 'pong',
-      },
-    },
-  },
+import { GraphQLServer } from "graphql-yoga"
+import resolvers from "./graphql/resolvers"
+
+const server = new GraphQLServer({
+  typeDefs: "graphql/schema.graphql",
+  resolvers: resolvers
 })
-// Start the server and explore http://localhost:4000/graphql
-server.start()
-console.log('server is running')
+
+server.start(() => console.log("Сервер GraphQL успешно запущен"))
