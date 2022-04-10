@@ -1,5 +1,5 @@
 {
-  "name": "movieql",
+  "name": "udemy-graphql-api-2021",
   "version": "1.0.0",
   "description": "API базы фильмов на GraphQL",
   "main": "index.js",
