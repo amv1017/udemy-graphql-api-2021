@@ -38,3 +38,19 @@ query {
   }
 }
 ```
+---
+Get movie and suggestions (REST API wrapped in GraphQL):
+```sh
+query {
+  movie(id: 15553) {
+    title
+    id
+    rating
+  }
+  suggestions(id: 15553) {
+    title
+    medium_cover_image
+    rating
+  }
+}
+```
