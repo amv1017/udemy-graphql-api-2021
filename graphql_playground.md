@@ -24,3 +24,17 @@ mutation {
   deleteMovie(id: 3) 
 }
 ```
+---
+Get all movies (REST API wrapped in GraphQL):
+```sh
+query {
+  movies {
+    id
+    title
+    rating
+    medium_cover_image
+    summary
+    language
+  }
+}
+```
