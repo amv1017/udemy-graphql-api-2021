@@ -1,3 +1,14 @@
+Get all movies:
+```sh
+query {
+  movies {
+    id
+    name
+    score
+  }
+}
+```
+---
 Add movie:
 ```sh
 mutation {
@@ -7,13 +18,9 @@ mutation {
 }
 ```
 ---
-Get all movies:
+Delete movie:
 ```sh
-query {
-  movies {
-    id
-    name
-    score
-  }
+mutation {
+  deleteMovie(id: 3) 
 }
 ```
